@@ -7,7 +7,7 @@
   "author": "",
   "scripts": {
     "dev": "pm2-dev server.js",
-    "start": "pm2 start server.js"
+    "start": "pm2 start ecosystem.config.js"
   },
   "license": "ISC",
   "dependencies": {
