@@ -1,24 +1,34 @@
-# Title of the project
+# Random Dad Jokes
 
-Description of the project.
+Learn the most commonly used features of PM2, and how to use it to deploy, manage, and scale your Node.js applications in production.
 
-**Tutorial**: [Link to corresponding BetterStack tutorial]().
+**Tutorial**: [How to Deploy, Manage and Scale Node.js Applications with PM2](https://betterstack.com/community/guides/scaling-nodejs/pm2-guide/).
 
 ![Screenshot or GIF of the application in action](screenshot.png).
 
 ## 🟢 Prerequisites
 
-A list of requirements and package versions that the reader needs to build and run the project.
+You must have Node.js and `npm` installed on your machine. This project was built against the following versions:
 
-- The first thing.
-- The second thing.
+- Node.js v16.14.0.
+- npm v8.3.1.
 
 ## 📦 Getting started
 
-A brief guide to setting up the project.
+- Clone this repo to your machine:
 
-- Do the first thing.
-- Do the next thing.
+```shell
+git clone https://github.com/betterstack-community/hacker-news-redis
+```
+
+- `cd` into the project folder and run `npm install` to download dependencies.
+- Execute the command below to start the development server:
+
+```
+node server.js
+```
+
+- Visit http://localhost:3000 in your browser.
 
 ## ⚖ License
 
