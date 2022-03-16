@@ -4,7 +4,7 @@ Learn the most commonly used features of PM2, and how to use it to deploy, manag
 
 **Tutorial**: [How to Deploy, Manage and Scale Node.js Applications with PM2](https://betterstack.com/community/guides/scaling-nodejs/pm2-guide/).
 
-![Screenshot or GIF of the application in action](screenshot.png).
+![Screenshot or GIF of the application in action](screenshot.png)
 
 ## 🟢 Prerequisites
 
