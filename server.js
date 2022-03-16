@@ -37,7 +37,7 @@ app.get('/', async (req, res, next) => {
     const response = await getRandomJoke();
 
     res.render('home', {
-      title: 'Random Jokes',
+      title: 'Random Dad Jokes',
       dadJoke: response,
     });
   } catch (err) {
@@ -46,6 +46,12 @@ app.get('/', async (req, res, next) => {
 });
 
 app.get('/joke', async (req, res, next) => {
+  console.log('Request handled by process:', process.env.NODE_APP_INSTANCE);
+
+  if (process.env.NODE_APP_INSTANCE === 0) {
+    console.log('Executing some operation on process 0 only...');
+  }
+
   try {
     const response = await getRandomJoke();
     res.json(response);
@@ -72,7 +78,10 @@ app.use(function (err, req, res, next) {
 
 const server = app.listen(process.env.PORT || 3000, () => {
   console.log(`dadjokes server started on port: ${server.address().port}`);
-  process.send('ready');
+  // simulate a ready application after 1 second
+  setTimeout(function () {
+    process.send('ready');
+  }, 1000);
 });
 
 function cleanupAndExit() {
@@ -81,3 +90,6 @@ function cleanupAndExit() {
     process.exit(0);
   });
 }
+
+process.on('SIGTERM', cleanupAndExit);
+process.on('SIGINT', cleanupAndExit);
