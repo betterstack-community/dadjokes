@@ -13,18 +13,23 @@ module.exports = {
       exec_mode: 'cluster',
       env: {
         PORT: 3000,
+        NODE_ENV: 'development',
+      },
+      env_production: {
+        PORT: 3000,
         NODE_ENV: 'production',
       },
     },
   ],
   deploy: {
     production: {
-      user: 'ayo',
-      host: ['168.119.119.25'],
+      user: '',
+      host: [''],
       ref: 'origin/prod',
-      repo: 'git@github.com:betterstack-community/dadjokes.git',
-      path: '/home/ayo/dadjokes',
-      'post-deploy': 'npm install',
+      repo: '',
+      path: '',
+      'post-setup': 'npm install',
+      'post-deploy': 'pm2 startOrRestart ecosystem.config.js --env production',
     },
   },
 };
