@@ -1,0 +1,17 @@
+extends default
+
+block content
+  .app
+    header Random Dad Jokes
+    section.jokes
+      #js-joke-text.joke-text #{dadJoke.joke}
+    #js-spinner.spinner.hidden
+      .rect1
+      .rect2
+      .rect3
+      .rect4
+      .rect5
+    section.controls
+      button#js-new-joke.new-joke.button(type='button')
+        | Generate a new joke
+      a#js-tweet.twitter.button(target='_blank' rel='noreferrer') Tweet it!
