@@ -18,7 +18,7 @@ You must have Node.js and `npm` installed on your machine. This project was buil
 - Clone this repo to your machine:
 
 ```shell
-git clone https://github.com/betterstack-community/hacker-news-redis
+git clone https://github.com/betterstack-community/dadjokes
 ```
 
 - `cd` into the project folder and run `npm install` to download dependencies.
