@@ -1,10 +1,10 @@
 {
-  "name": "dadjoke",
+  "name": "dadjokes",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "keywords": [],
-  "author": "",
+  "author": "Better Stack Team",
   "scripts": {
     "dev": "pm2-dev server.js",
     "start": "pm2 start ecosystem.config.js"
